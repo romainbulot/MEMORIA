@@ -62,14 +62,19 @@ class TCPServer {
 			/* Transformation du texte du client en majuscules */    
 			texteDuClientEnMajuscules = texteDuClient.toUpperCase() + '\n';  
 
+
+			
+
 			/* Affichage du texte renvoyé du client */         
 			System.out.println(ANSI_BLUE + "\n***********************************\nMessage envoyé au client: " + texteDuClientEnMajuscules +"***********************************" + ANSI_RESET ); 
 			System.out.println("\nDepuis l'adresse : " + monAdresse.getHostAddress());
 			System.out.println("Sur le port : " + monPort);
+			System.out.println("\nVers l'adresse : " + connexionSocket.getInetAddress());
 			System.out.println("\n----------------------------------------------------");
 
 			/* Renvoi du texte en majuscules */    
 			envoyeAuClient.writeBytes(texteDuClientEnMajuscules);   
+
 		}   
 	}
 } 

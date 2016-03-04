@@ -22,7 +22,7 @@ class TCPClient {
 		/* Déclaration de la variable du texte retourné par le Serveur*/
 		String texteRetourneParServeur; 
 
-
+  
 		/* Demande de la saisie du port */
 		System.out.println("\n----------------------------------------------------");
 		System.out.print("\nVeuillez renseigner le port souhaité : ");
@@ -30,7 +30,7 @@ class TCPClient {
 		/* Enregistrement du port saisi */
 		Scanner in = new Scanner(System.in);
 		monPort = in.nextInt();
-
+		while(true)          { 
 		/* Demande de la saisie du mot */
 		System.out.print("\nVeuillez renseigner le texte à capitaliser : ");
 
@@ -52,8 +52,10 @@ class TCPClient {
 		texteRetourneParServeur = inFromServer.readLine(); 
 
 		System.out.println( ANSI_GREEN  + "\n***********************************\nMessage reçu du serveur : " + texteRetourneParServeur +"\n***********************************\n" + ANSI_RESET ) ; 
+		
 		clientSocket.close(); 
 	}
 } 
+}
 
 
