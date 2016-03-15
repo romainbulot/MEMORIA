@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.*; 
 import java.util.Scanner;
 
-class TCPClient {  
+class Client {  
 	public static void main(String argv[]) throws Exception  { 
 		
 		/*Couleur terminal */
