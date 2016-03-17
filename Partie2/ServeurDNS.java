@@ -39,7 +39,7 @@ public class ServeurDNS {
 		*/
 		if(args[0].equals("default")){
 			if (args.length <= 1) {
-				UDPR.setSERVER_DNS("10.162.8.51");
+				UDPR.setSERVER_DNS("192.168.10.35");
 				f = new File("DNSFILE.TXT");
 				if(f.exists()){
 					UDPR.setDNSFile("DNSFILE.TXT");
@@ -58,7 +58,7 @@ public class ServeurDNS {
 				UDPR.start();
 			}
 			else{
-				System.out.print("L'�x�cution par d�faut n'a pas d'autres arguments");
+				System.out.print("L'éxécution par défaut n'a pas d'autres arguments");
 			}
 		}
 		else{

@@ -64,6 +64,7 @@ public void run() {
     /* Affichage du texte renvoyé du client */         
     System.out.println(ANSI_BLUE + "\n***********************************\nMessage envoyé au client: " + texteDuClientEnMajuscules +"***********************************" + ANSI_RESET ); 
     System.out.println("\nVers l'adresse : " + socketCo.getInetAddress());
+     System.out.println("\nSur les ports : " + socketCo.getPort() + "   /   local : " + socketCo.getLocalPort());
     System.out.println("\n----------------------------------------------------");
     /* Renvoi du texte en majuscules */    
     envoyeAuClient.writeBytes(texteDuClientEnMajuscules);   
